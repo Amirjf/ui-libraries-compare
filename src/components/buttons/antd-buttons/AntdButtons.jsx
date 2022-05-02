@@ -1,5 +1,5 @@
 import React from 'react';
-import { SearchOutlined } from '@ant-design/icons';
+import { DownloadOutlined, SearchOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 const AntdButtons = () => {
   return (
@@ -12,9 +12,10 @@ const AntdButtons = () => {
         <Button>Default Button</Button>
       </div>
       <div>
-        <Button type="primary" icon={<SearchOutlined />}>
+        <Button className="mx-2" type="primary" icon={<SearchOutlined />}>
           Search
         </Button>
+        <Button type="primary" shape="circle" icon={<DownloadOutlined />} />
       </div>
       <div>
         <Button type="primary" ghost>

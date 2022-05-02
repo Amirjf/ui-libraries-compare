@@ -1,6 +1,7 @@
 import React from 'react';
 import SectionHeading from '../section-heading/SectionHeading';
 import AntdButtons from './antd-buttons/AntdButtons';
+import ChakraButtons from './chakra-buttons/ChakraButtons';
 import MuiButtons from './mui-buttons/MuiButtons';
 
 const Buttons = () => {
@@ -17,6 +18,7 @@ const Buttons = () => {
       </div>
       <AntdButtons />
       <MuiButtons />
+      <ChakraButtons />
     </div>
   );
 };
