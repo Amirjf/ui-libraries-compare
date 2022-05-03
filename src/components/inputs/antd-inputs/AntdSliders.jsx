@@ -1,7 +1,6 @@
 import { Slider } from 'antd';
 import React from 'react';
 import CustomDivider from '../../custom-divider/CustomDivider';
-import SectionHeading from '../../section-heading/SectionHeading';
 
 const marks = {
   0: '0°C',
@@ -18,7 +17,7 @@ const marks = {
 const AntdSliders = () => {
   return (
     <>
-      <SectionHeading title="Slider" />
+      <CustomDivider bg="secondary" textAlign="left" title="Slider" />
       <div className="flex justify-evenly">
         <div style={{ width: 200 }}>
           <Slider defaultValue={30} />

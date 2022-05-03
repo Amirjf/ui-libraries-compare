@@ -1,12 +1,12 @@
 import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
 import { Switch } from 'antd';
 import React from 'react';
-import SectionHeading from '../../section-heading/SectionHeading';
+import CustomDivider from '../../custom-divider/CustomDivider';
 
 const AntdSwitches = () => {
   return (
     <>
-      <SectionHeading title="Switch" />
+      <CustomDivider bg="secondary" textAlign="left" title="Switch" />
       <div className="flex justify-evenly">
         <Switch defaultChecked />
         <Switch

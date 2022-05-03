@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeading from '../section-heading/SectionHeading';
+import CustomDivider from '../custom-divider/CustomDivider';
 import AntdSelects from './antd-selects/AntdSelects';
 import ChakraSelects from './chakra-ui/ChakraSelects';
 import MuiSelects from './mui-selects/MuiSelects';
@@ -7,7 +7,7 @@ import MuiSelects from './mui-selects/MuiSelects';
 const Selects = () => {
   return (
     <div>
-      <SectionHeading title="SELECT" />
+      <CustomDivider bg="primary" title="SELECT" />
       <div className="grid grid-cols-6 pl-4">
         <span className="py-4"></span>
         <span className="py-4">Default</span>

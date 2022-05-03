@@ -1,7 +1,7 @@
 import React from 'react';
 import { styled } from '@mui/material/styles';
 import { FormControlLabel, Switch } from '@mui/material';
-import SectionHeading from '../../section-heading/SectionHeading';
+import CustomDivider from '../../custom-divider/CustomDivider';
 
 const Android12Switch = styled(Switch)(({ theme }) => ({
   padding: 8,
@@ -39,7 +39,7 @@ const Android12Switch = styled(Switch)(({ theme }) => ({
 const MuiSwitches = () => {
   return (
     <>
-      <SectionHeading title="Switch" />
+      <CustomDivider textAlign="left" bg="secondary" title="Switch" />
       <div className="flex justify-evenly">
         <Switch defaultChecked />
         <FormControlLabel control={<Switch defaultChecked />} label="Label" />

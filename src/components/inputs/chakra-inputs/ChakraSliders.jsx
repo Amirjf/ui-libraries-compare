@@ -6,8 +6,6 @@ import {
   RangeSliderThumb,
 } from '@chakra-ui/react';
 import React from 'react';
-import CustomDivider from '../../custom-divider/CustomDivider';
-import SectionHeading from '../../section-heading/SectionHeading';
 
 const ChakraSliders = () => {
   return (

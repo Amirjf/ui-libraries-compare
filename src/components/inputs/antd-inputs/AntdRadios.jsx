@@ -1,6 +1,6 @@
 import { Radio } from 'antd';
 import React from 'react';
-import SectionHeading from '../../section-heading/SectionHeading';
+import CustomDivider from '../../custom-divider/CustomDivider';
 
 const optionsWithDisabled = [
   { label: 'Apple', value: 'Apple' },
@@ -11,7 +11,7 @@ const optionsWithDisabled = [
 const AntdRadios = () => {
   return (
     <>
-      <SectionHeading title="Radio" />
+      <CustomDivider bg="secondary" textAlign="left" title="Radio" />
       <div className="flex justify-evenly">
         <Radio.Group>
           <Radio value={1}>A</Radio>

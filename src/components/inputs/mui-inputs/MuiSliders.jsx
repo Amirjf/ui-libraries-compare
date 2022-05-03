@@ -1,7 +1,6 @@
 import { Slider, Stack } from '@mui/material';
 import React from 'react';
 import { VolumeDown, VolumeUp } from '@mui/icons-material';
-import SectionHeading from '../../section-heading/SectionHeading';
 import CustomDivider from '../../custom-divider/CustomDivider';
 
 const marks = [
@@ -32,7 +31,7 @@ const MuiSliders = () => {
 
   return (
     <>
-      <SectionHeading title="Slider" />
+      <CustomDivider bg="secondary" textAlign="left" title="Slider" />
       <div className="flex justify-evenly items-center">
         <Stack
           spacing={2}

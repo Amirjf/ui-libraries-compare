@@ -1,23 +1,23 @@
 import React from 'react';
-import InputSection from '../input-section/InputSection';
-import SectionHeading from '../section-heading/SectionHeading';
+import CustomDivider from '../custom-divider/CustomDivider';
+import InnerSection from '../input-section/InnerSection';
 import AntdInputs from './antd-inputs/AntdInputs';
 import ChakraInputs from './chakra-inputs/ChakraInputs';
 import MuiInputs from './mui-inputs/MuiInputs';
 
-const Inputs = () => {
+const Inputs = ({ inputRef }) => {
   return (
-    <div>
-      <SectionHeading title="INPUTS" />
-      <InputSection title="MUI">
+    <div ref={inputRef}>
+      <CustomDivider bg="primary" title="INPUTS" />
+      <InnerSection title="MUI">
         <MuiInputs />
-      </InputSection>
-      <InputSection title="ANT Design">
+      </InnerSection>
+      <InnerSection title="ANT Design">
         <AntdInputs />
-      </InputSection>
-      <InputSection title="Chakra Ui">
+      </InnerSection>
+      <InnerSection title="Chakra Ui">
         <ChakraInputs />
-      </InputSection>
+      </InnerSection>
     </div>
   );
 };

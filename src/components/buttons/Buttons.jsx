@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeading from '../section-heading/SectionHeading';
+import CustomDivider from '../custom-divider/CustomDivider';
 import AntdButtons from './antd-buttons/AntdButtons';
 import ChakraButtons from './chakra-buttons/ChakraButtons';
 import MuiButtons from './mui-buttons/MuiButtons';
@@ -7,7 +7,7 @@ import MuiButtons from './mui-buttons/MuiButtons';
 const Buttons = () => {
   return (
     <div>
-      <SectionHeading title="BUTTON" />
+      <CustomDivider bg="primary" title="BUTTON" />
       <div className="grid grid-cols-6 pl-4">
         <span className="py-4"></span>
         <span className="py-4">Primary</span>

@@ -10,7 +10,7 @@ import {
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormLabel from '@mui/material/FormLabel';
-import SectionHeading from '../../section-heading/SectionHeading';
+import CustomDivider from '../../custom-divider/CustomDivider';
 
 const MuiRadios = () => {
   const [alignment, setAlignment] = React.useState('web');
@@ -20,7 +20,7 @@ const MuiRadios = () => {
   };
   return (
     <>
-      <SectionHeading title="Radio" />
+      <CustomDivider bg="secondary" textAlign="left" title="Radio" />
       <div className="flex justify-evenly">
         <FormControl>
           <FormLabel id="demo-row-radio-buttons-group-label">Gender</FormLabel>

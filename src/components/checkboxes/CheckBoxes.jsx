@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionHeading from '../section-heading/SectionHeading';
+import CustomDivider from '../custom-divider/CustomDivider';
 import AntdCheckbox from './antd-checkbox/AntdCheckbox';
 import ChakraCheckBox from './chakra-checkbox/ChakraCheckBox';
 import MuiCheckBox from './mui-chekbox/MuiCheckBox';
@@ -7,7 +7,7 @@ import MuiCheckBox from './mui-chekbox/MuiCheckBox';
 const CheckBoxes = () => {
   return (
     <div>
-      <SectionHeading title="CHECKBOX" />
+      <CustomDivider bg="primary" title="CHECKBOX" />
       <div className="grid grid-cols-6 pl-4">
         <span className="py-4"></span>
         <span className="py-4">Default</span>

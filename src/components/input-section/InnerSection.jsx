@@ -1,6 +1,6 @@
 import React from 'react';
 
-const InputSection = ({ children, title }) => {
+const InnerSection = ({ children, title, inputRef }) => {
   return (
     <div className="my-10 relative">
       <h2 className="bg-white absolute -top-6 left-3 p-2 text-2xl font-semibold">
@@ -11,4 +11,4 @@ const InputSection = ({ children, title }) => {
   );
 };
 
-export default InputSection;
+export default InnerSection;

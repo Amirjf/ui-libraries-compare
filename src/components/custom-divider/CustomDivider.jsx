@@ -3,7 +3,7 @@ import { Chip, Divider as MuiDivider } from '@mui/material';
 import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
 
-const CustomDivider = ({ vertical, title }) => {
+const CustomDivider = ({ vertical, title, bg, textAlign = 'center' }) => {
   if (vertical)
     return (
       <ChakraProvider>
@@ -12,7 +12,11 @@ const CustomDivider = ({ vertical, title }) => {
         </Center>
       </ChakraProvider>
     );
-  return <MuiDivider>{title ? <Chip label={title} /> : null}</MuiDivider>;
+  return (
+    <MuiDivider sx={{ my: 5, py: 3 }} textAlign={textAlign} color={bg}>
+      {title ? <Chip color={bg} label={title} /> : null}
+    </MuiDivider>
+  );
 };
 
 export default CustomDivider;
