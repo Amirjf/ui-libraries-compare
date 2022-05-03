@@ -4,9 +4,15 @@ import {
   CloseOutlined,
   UserOutlined,
 } from '@ant-design/icons';
-import { DatePicker, Input, Select, Switch } from 'antd';
+import { DatePicker, Input, Select, Switch, Radio } from 'antd';
 import React from 'react';
 import SectionHeading from '../../section-heading/SectionHeading';
+
+const optionsWithDisabled = [
+  { label: 'Apple', value: 'Apple' },
+  { label: 'Pear', value: 'Pear' },
+  { label: 'Orange', value: 'Orange', disabled: true },
+];
 
 const AntdInputs = () => {
   return (
@@ -19,7 +25,7 @@ const AntdInputs = () => {
             <Select.Option value="Zhejiang">Zhejiang</Select.Option>
             <Select.Option value="Jiangsu">Jiangsu</Select.Option>
           </Select>
-          <Input style={{ width: '50%' }} defaultValue="text" />
+          <Input style={{ width: '25%' }} defaultValue="text" />
         </Input.Group>
         <Input.Search placeholder="input search text" allowClear />
         <Input.Password placeholder="input password" />
@@ -43,8 +49,8 @@ const AntdInputs = () => {
       <div className="flex justify-evenly">
         <Switch defaultChecked />
         <Switch
-          checkedChildren="开启"
-          unCheckedChildren="关闭"
+          checkedChildren="Label"
+          unCheckedChildren="off"
           defaultChecked
         />
 
@@ -54,6 +60,21 @@ const AntdInputs = () => {
           checkedChildren={<CheckOutlined />}
           unCheckedChildren={<CloseOutlined />}
           defaultChecked
+        />
+        <Switch loading defaultChecked />
+      </div>
+      <SectionHeading title="Switch" />
+      <div className="flex justify-evenly">
+        <Radio.Group>
+          <Radio value={1}>A</Radio>
+          <Radio value={2}>B</Radio>
+          <Radio value={3}>C</Radio>
+          <Radio value={4}>D</Radio>
+        </Radio.Group>
+        <Radio.Group
+          options={optionsWithDisabled}
+          optionType="button"
+          buttonStyle="solid"
         />
       </div>
     </>

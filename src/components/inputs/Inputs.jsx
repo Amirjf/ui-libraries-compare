@@ -2,6 +2,7 @@ import React from 'react';
 import InputSection from '../input-section/InputSection';
 import SectionHeading from '../section-heading/SectionHeading';
 import AntdInputs from './antd-inputs/AntdInputs';
+import ChakraInputs from './chakra-inputs/ChakraInputs';
 import MuiInputs from './mui-inputs/MuiInputs';
 
 const Inputs = () => {
@@ -13,6 +14,9 @@ const Inputs = () => {
       </InputSection>
       <InputSection title="ANT Design">
         <AntdInputs />
+      </InputSection>
+      <InputSection title="Chakra Ui">
+        <ChakraInputs />
       </InputSection>
     </div>
   );
