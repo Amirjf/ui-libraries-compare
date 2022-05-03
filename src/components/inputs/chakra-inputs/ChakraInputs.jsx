@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { PhoneFilled } from '@ant-design/icons';
 import ChakraRadios from './ChakraRadios';
+import ChakraSliders from './ChakraSliders';
 
 const ChakraInputs = () => {
   const [show, setShow] = React.useState(false);
@@ -55,6 +56,7 @@ const ChakraInputs = () => {
 
         <ChakraRadios />
       </div>
+      <ChakraSliders />
     </ChakraProvider>
   );
 };

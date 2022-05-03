@@ -7,7 +7,7 @@ const CustomDivider = ({ vertical, title }) => {
   if (vertical)
     return (
       <ChakraProvider>
-        <Center height="50px">
+        <Center height="50px" marginInline={3}>
           <ChakraDivider orientation="vertical" />
         </Center>
       </ChakraProvider>

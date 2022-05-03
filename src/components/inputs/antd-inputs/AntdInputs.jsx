@@ -2,6 +2,7 @@ import { ClockCircleOutlined, UserOutlined } from '@ant-design/icons';
 import { DatePicker, Input, Select } from 'antd';
 import React from 'react';
 import AntdRadios from './AntdRadios';
+import AntdSliders from './AntdSliders';
 import AntdSwitches from './AntdSwitches';
 
 const AntdInputs = () => {
@@ -37,6 +38,7 @@ const AntdInputs = () => {
       </div>
       <AntdSwitches />
       <AntdRadios />
+      <AntdSliders />
     </>
   );
 };
