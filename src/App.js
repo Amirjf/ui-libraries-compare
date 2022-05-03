@@ -5,9 +5,10 @@ import Inputs from './components/inputs/Inputs';
 import MainContent from './components/main/MainContent';
 import Selects from './components/selects/Selects';
 import SideNav from './components/sidenav/SideNav';
-import './App.css';
 import Avatars from './components/avatars/Avatars';
+import Tables from './components/tables/Tables';
 
+import './App.css';
 function App() {
   const [showSideNav, setShowSideNav] = useState(true);
   const inputRef = useRef();
@@ -31,6 +32,7 @@ function App() {
         <Selects />
         <Inputs inputRef={inputRef} />
         <Avatars />
+        <Tables />
       </MainContent>
     </div>
   );
