@@ -13,6 +13,7 @@ import React from 'react';
 import { AccountCircle, VisibilityOff, Visibility } from '@mui/icons-material';
 import MuiRadios from './MuiRadios';
 import MuiSwitches from './MuiSwitches';
+import MuiSliders from './MuiSliders';
 
 const MuiInputs = () => {
   const [values, setValues] = React.useState({
@@ -118,6 +119,7 @@ const MuiInputs = () => {
       </div>
       <MuiSwitches />
       <MuiRadios />
+      <MuiSliders />
     </>
   );
 };
