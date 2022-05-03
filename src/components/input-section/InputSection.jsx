@@ -2,11 +2,11 @@ import React from 'react';
 
 const InputSection = ({ children, title }) => {
   return (
-    <div className="border-2 border-[#027FFF] relative">
-      <h2 className="bg-white p-4 absolute -top-8 text-xl font-semibold">
+    <div className="my-10 relative">
+      <h2 className="bg-white absolute -top-6 left-3 p-2 text-2xl font-semibold">
         {title}
       </h2>
-      <div className="m-10">{children}</div>
+      <div className="border-2 border-[#027FFF] p-10">{children}</div>
     </div>
   );
 };

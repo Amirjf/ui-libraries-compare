@@ -1,15 +1,18 @@
 import {
   Box,
   FormControl,
+  FormControlLabel,
   IconButton,
   Input,
   InputAdornment,
   InputLabel,
   OutlinedInput,
+  Switch,
   TextField,
 } from '@mui/material';
 import { AccountCircle, VisibilityOff, Visibility } from '@mui/icons-material';
 import React from 'react';
+import SectionHeading from '../../section-heading/SectionHeading';
 
 const MuiInputs = () => {
   const [values, setValues] = React.useState({
@@ -28,86 +31,98 @@ const MuiInputs = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-6 md:grid-cols-6 xl:grid-cols-6 gap-6">
-      <TextField id="outlined-basic" label="Outlined" variant="outlined" />
-      <TextField id="filled-basic" label="Filled" variant="filled" />
-      <TextField id="standard-basic" label="Standard" variant="standard" />
-      <TextField
-        error
-        id="filled-error-helper-text"
-        label="Error"
-        defaultValue="Hello World"
-        helperText="Incorrect entry."
-        variant="filled"
-      />
-      <TextField
-        error
-        id="standard-error"
-        label="Error"
-        defaultValue="Hello World"
-        variant="standard"
-      />
-      <TextField
-        error
-        id="standard-error-helper-text"
-        label="Error"
-        defaultValue="Hello World"
-        helperText="Incorrect entry."
-        variant="standard"
-      />
-      <TextField
-        id="outlined-multiline-static"
-        label="Multiline"
-        multiline
-        rows={4}
-        defaultValue="Default Value"
-      />
-      <FormControl variant="standard">
-        <InputLabel htmlFor="input-with-icon-adornment">
-          With a start adornment
-        </InputLabel>
-        <Input
-          id="input-with-icon-adornment"
-          startAdornment={
-            <InputAdornment position="start">
-              <AccountCircle />
-            </InputAdornment>
-          }
+    <>
+      <div className="grid grid-cols-1 lg:grid-cols-6 md:grid-cols-6 xl:grid-cols-6 gap-6">
+        <TextField id="outlined-basic" label="Outlined" variant="outlined" />
+        <TextField id="filled-basic" label="Filled" variant="filled" />
+        <TextField id="standard-basic" label="Standard" variant="standard" />
+        <TextField
+          error
+          id="filled-error-helper-text"
+          label="Error"
+          defaultValue="Hello World"
+          helperText="Incorrect entry."
+          variant="filled"
         />
-      </FormControl>
-      <Box sx={{ display: 'flex', alignItems: 'start' }}>
-        <AccountCircle sx={{ color: 'action.active', mr: 1, my: 3 }} />
-        <TextField id="input-with-sx" label="With sx" variant="standard" />
-      </Box>
-      <TextField label="Outlined secondary" color="secondary" focused />
-      <TextField
-        label="With normal TextField"
-        id="outlined-start-adornment"
-        InputProps={{
-          startAdornment: <InputAdornment position="start">kg</InputAdornment>,
-        }}
-      />
-      <FormControl variant="outlined">
-        <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
-        <OutlinedInput
-          id="outlined-adornment-password"
-          type={values.showPassword ? 'text' : 'password'}
-          endAdornment={
-            <InputAdornment position="end">
-              <IconButton
-                aria-label="toggle password visibility"
-                onClick={handleClickShowPassword}
-                onMouseDown={handleMouseDownPassword}
-                edge="end"
-              >
-                {values.showPassword ? <VisibilityOff /> : <Visibility />}
-              </IconButton>
-            </InputAdornment>
-          }
-          label="Password"
+        <TextField
+          error
+          id="standard-error"
+          label="Error"
+          defaultValue="Hello World"
+          variant="standard"
         />
-      </FormControl>
-    </div>
+        <TextField
+          error
+          id="standard-error-helper-text"
+          label="Error"
+          defaultValue="Hello World"
+          helperText="Incorrect entry."
+          variant="standard"
+        />
+        <TextField
+          id="outlined-multiline-static"
+          label="Multiline"
+          multiline
+          rows={4}
+          defaultValue="Default Value"
+        />
+        <FormControl variant="standard">
+          <InputLabel htmlFor="input-with-icon-adornment">
+            With a start adornment
+          </InputLabel>
+          <Input
+            id="input-with-icon-adornment"
+            startAdornment={
+              <InputAdornment position="start">
+                <AccountCircle />
+              </InputAdornment>
+            }
+          />
+        </FormControl>
+        <Box sx={{ display: 'flex', alignItems: 'start' }}>
+          <AccountCircle sx={{ color: 'action.active', mr: 1, my: 3 }} />
+          <TextField id="input-with-sx" label="With sx" variant="standard" />
+        </Box>
+        <TextField label="Outlined secondary" color="secondary" focused />
+        <TextField
+          label="With normal TextField"
+          id="outlined-start-adornment"
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">kg</InputAdornment>
+            ),
+          }}
+        />
+        <FormControl variant="outlined">
+          <InputLabel htmlFor="outlined-adornment-password">
+            Password
+          </InputLabel>
+          <OutlinedInput
+            id="outlined-adornment-password"
+            type={values.showPassword ? 'text' : 'password'}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                  onMouseDown={handleMouseDownPassword}
+                  edge="end"
+                >
+                  {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+            label="Password"
+          />
+        </FormControl>
+      </div>
+      <SectionHeading title="Switch" />
+      <div className="flex justify-evenly">
+        <Switch defaultChecked />
+        <FormControlLabel control={<Switch defaultChecked />} label="Label" />
+        <Switch defaultChecked color="secondary" />
+      </div>
+    </>
   );
 };
 
