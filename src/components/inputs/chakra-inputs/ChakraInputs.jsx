@@ -3,65 +3,19 @@ import {
   Box,
   Button,
   ChakraProvider,
-  HStack,
   Input,
   InputGroup,
   InputLeftAddon,
   InputLeftElement,
   InputRightElement,
-  Radio,
-  RadioGroup,
-  Stack,
   Switch,
-  useRadio,
-  useRadioGroup,
 } from '@chakra-ui/react';
 import { PhoneFilled } from '@ant-design/icons';
-
-function RadioCard(props) {
-  const { getInputProps, getCheckboxProps } = useRadio(props);
-
-  const input = getInputProps();
-  const checkbox = getCheckboxProps();
-
-  return (
-    <Box as="label">
-      <input {...input} />
-      <Box
-        {...checkbox}
-        cursor="pointer"
-        borderWidth="1px"
-        borderRadius="md"
-        boxShadow="md"
-        _checked={{
-          bg: 'teal.600',
-          color: 'white',
-          borderColor: 'teal.600',
-        }}
-        _focus={{
-          boxShadow: 'outline',
-        }}
-        px={5}
-        py={3}
-      >
-        {props.children}
-      </Box>
-    </Box>
-  );
-}
+import ChakraRadios from './ChakraRadios';
 
 const ChakraInputs = () => {
-  const options = ['react', 'vue', 'svelte'];
   const [show, setShow] = React.useState(false);
   const handleClick = () => setShow(!show);
-
-  const { getRootProps, getRadioProps } = useRadioGroup({
-    name: 'framework',
-    defaultValue: 'react',
-    onChange: console.log,
-  });
-
-  const group = getRootProps();
 
   return (
     <ChakraProvider>
@@ -99,19 +53,7 @@ const ChakraInputs = () => {
         />
         <Switch size="lg" />
 
-        <Radio value="1">First</Radio>
-        <Radio value="2">Second</Radio>
-
-        <HStack {...group}>
-          {options.map((value) => {
-            const radio = getRadioProps({ value });
-            return (
-              <RadioCard key={value} {...radio}>
-                {value}
-              </RadioCard>
-            );
-          })}
-        </HStack>
+        <ChakraRadios />
       </div>
     </ChakraProvider>
   );

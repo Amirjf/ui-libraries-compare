@@ -1,18 +1,8 @@
-import {
-  CheckOutlined,
-  ClockCircleOutlined,
-  CloseOutlined,
-  UserOutlined,
-} from '@ant-design/icons';
-import { DatePicker, Input, Select, Switch, Radio } from 'antd';
+import { ClockCircleOutlined, UserOutlined } from '@ant-design/icons';
+import { DatePicker, Input, Select } from 'antd';
 import React from 'react';
-import SectionHeading from '../../section-heading/SectionHeading';
-
-const optionsWithDisabled = [
-  { label: 'Apple', value: 'Apple' },
-  { label: 'Pear', value: 'Pear' },
-  { label: 'Orange', value: 'Orange', disabled: true },
-];
+import AntdRadios from './AntdRadios';
+import AntdSwitches from './AntdSwitches';
 
 const AntdInputs = () => {
   return (
@@ -45,38 +35,8 @@ const AntdInputs = () => {
           <DatePicker style={{ width: '50%' }} />
         </Input.Group>
       </div>
-      <SectionHeading title="Switch" />
-      <div className="flex justify-evenly">
-        <Switch defaultChecked />
-        <Switch
-          checkedChildren="Label"
-          unCheckedChildren="off"
-          defaultChecked
-        />
-
-        <Switch checkedChildren="1" unCheckedChildren="0" />
-
-        <Switch
-          checkedChildren={<CheckOutlined />}
-          unCheckedChildren={<CloseOutlined />}
-          defaultChecked
-        />
-        <Switch loading defaultChecked />
-      </div>
-      <SectionHeading title="Switch" />
-      <div className="flex justify-evenly">
-        <Radio.Group>
-          <Radio value={1}>A</Radio>
-          <Radio value={2}>B</Radio>
-          <Radio value={3}>C</Radio>
-          <Radio value={4}>D</Radio>
-        </Radio.Group>
-        <Radio.Group
-          options={optionsWithDisabled}
-          optionType="button"
-          buttonStyle="solid"
-        />
-      </div>
+      <AntdSwitches />
+      <AntdRadios />
     </>
   );
 };
