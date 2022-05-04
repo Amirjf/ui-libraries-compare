@@ -14,6 +14,7 @@ import Tables from './components/tables/Tables';
 import './App.css';
 import Alerts from './components/alerts/Alerts';
 import Tabs from './components/tabs/Tabs';
+import Lists from './components/lists/Lists';
 function App() {
   const [showSideNav, setShowSideNav] = useState(true);
 
@@ -30,6 +31,7 @@ function App() {
           <Route path="/inputs" element={<Inputs />} />
           <Route path="/alerts" element={<Alerts />} />
           <Route path="/tabs" element={<Tabs />} />
+          <Route path="/lists" element={<Lists />} />
         </Routes>
       </MainContent>
     </div>

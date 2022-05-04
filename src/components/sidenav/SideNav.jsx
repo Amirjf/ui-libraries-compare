@@ -62,6 +62,11 @@ const SideNav = ({ sideNavState }) => {
               <p>Tabs</p>
             </Link>
           </li>
+          <li className="cursor-pointer">
+            <Link to="/lists">
+              <p>Lists</p>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
