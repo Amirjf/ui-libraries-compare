@@ -12,6 +12,7 @@ import Tables from './components/tables/Tables';
 // const Login = React.lazy(() => import('./containers/auth'));
 
 import './App.css';
+import Alerts from './components/alerts/Alerts';
 function App() {
   const [showSideNav, setShowSideNav] = useState(true);
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/avatars" element={<Avatars />} />
           <Route path="/tables" element={<Tables />} />
           <Route path="/inputs" element={<Inputs />} />
+          <Route path="/alerts" element={<Alerts />} />
         </Routes>
       </MainContent>
     </div>

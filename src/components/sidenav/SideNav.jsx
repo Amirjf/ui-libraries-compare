@@ -52,6 +52,11 @@ const SideNav = ({ sideNavState, getSubject }) => {
               <p>Selects</p>
             </Link>
           </li>
+          <li className="cursor-pointer">
+            <Link to="/alerts">
+              <p>Alerts</p>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>
