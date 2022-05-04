@@ -8,21 +8,27 @@ const AntdSwitches = () => {
     <>
       <CustomDivider bg="secondary" textAlign="left" title="Switch" />
       <div className="flex justify-evenly">
-        <Switch defaultChecked />
+        <Switch className="bg-blue-600" defaultChecked />
         <Switch
+          className="bg-blue-600"
           checkedChildren="Label"
           unCheckedChildren="off"
           defaultChecked
         />
 
-        <Switch checkedChildren="1" unCheckedChildren="0" />
+        <Switch
+          className="bg-blue-600"
+          checkedChildren="1"
+          unCheckedChildren="0"
+        />
 
         <Switch
+          className="bg-blue-600"
           checkedChildren={<CheckOutlined />}
           unCheckedChildren={<CloseOutlined />}
           defaultChecked
         />
-        <Switch loading defaultChecked />
+        <Switch className="bg-blue-600" loading defaultChecked />
       </div>
     </>
   );

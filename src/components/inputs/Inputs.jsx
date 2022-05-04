@@ -5,9 +5,9 @@ import AntdInputs from './antd-inputs/AntdInputs';
 import ChakraInputs from './chakra-inputs/ChakraInputs';
 import MuiInputs from './mui-inputs/MuiInputs';
 
-const Inputs = ({ inputRef }) => {
+const Inputs = () => {
   return (
-    <div ref={inputRef}>
+    <div>
       <CustomDivider bg="primary" title="INPUTS" />
       <InnerSection title="MUI">
         <MuiInputs />

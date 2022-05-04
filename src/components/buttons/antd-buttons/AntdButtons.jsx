@@ -6,24 +6,35 @@ const AntdButtons = () => {
     <div className="grid grid-cols-6 my-4">
       <span className="text-bold text-xl flex items-center">Ant Design : </span>
       <div>
-        <Button type="primary">Salam</Button>
+        <Button className="bg-blue-600" type="primary">
+          Salam
+        </Button>
       </div>
       <div>
         <Button>Default Button</Button>
       </div>
       <div>
-        <Button className="mx-2" type="primary" icon={<SearchOutlined />}>
+        <Button
+          className="mx-2 bg-blue-600"
+          type="primary"
+          icon={<SearchOutlined />}
+        >
           Search
         </Button>
-        <Button type="primary" shape="circle" icon={<DownloadOutlined />} />
+        <Button
+          className="bg-blue-600"
+          type="primary"
+          shape="circle"
+          icon={<DownloadOutlined />}
+        />
       </div>
       <div>
-        <Button type="primary" ghost>
+        <Button className="bg-blue-600" type="primary" ghost>
           Primary
         </Button>
       </div>
       <div>
-        <Button type="primary" danger>
+        <Button className="bg-blue-600" type="primary" danger>
           Primary
         </Button>
       </div>

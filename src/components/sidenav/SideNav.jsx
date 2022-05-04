@@ -2,7 +2,7 @@ import { MenuFoldOutlined } from '@ant-design/icons';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SideNav = ({ sideNavState, handleBackClick, getSubject }) => {
+const SideNav = ({ sideNavState, getSubject }) => {
   const { showSideNav, setShowSideNav } = sideNavState;
 
   return (
@@ -22,20 +22,35 @@ const SideNav = ({ sideNavState, handleBackClick, getSubject }) => {
       </div>
       <div className="p-10">
         <ul className="list-disc">
-          <li
-            className="cursor-pointer"
-            ref={getSubject}
-            onClick={handleBackClick}
-            id="input"
-          >
-            <p>Inputs</p>
+          <li className="cursor-pointer" id="input">
+            <Link to="/inputs">
+              <p>Inputs</p>
+            </Link>
           </li>
-          <li
-            className="cursor-pointer"
-            ref={getSubject}
-            onClick={handleBackClick}
-          >
-            <p>Buttons</p>
+          <li className="cursor-pointer">
+            <Link to="/buttons">
+              <p>Buttons</p>
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link to="/checkboxes">
+              <p>Checkboxes</p>
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link to="/avatars">
+              <p>avatars</p>
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link to="/tables">
+              <p>Tables</p>
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link to="/selects">
+              <p>Selects</p>
+            </Link>
           </li>
         </ul>
       </div>

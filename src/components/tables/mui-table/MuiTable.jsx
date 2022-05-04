@@ -7,6 +7,7 @@ import TableHead from '@mui/material/TableHead';
 import { DataGrid } from '@mui/x-data-grid';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein };
 }
@@ -54,9 +55,9 @@ const rows = [
 
 const MuiTable = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4">
+    <div className="flex flex-col">
       <TableContainer component={Paper}>
-        <Table sx={{ width: '100%' }} aria-label="simple table">
+        <Table aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell>Dessert (100g serving)</TableCell>
@@ -84,11 +85,11 @@ const MuiTable = () => {
           </TableBody>
         </Table>
       </TableContainer>
-      <div style={{ height: 400, width: '100%' }}>
+      <div style={{ height: 400, width: '100%', margin: '1rem auto' }}>
         <DataGrid
           rows={rowsForDataGrid}
           columns={columns}
-          pageSize={5}
+          pageSize={10}
           rowsPerPageOptions={[5]}
           checkboxSelection
         />
