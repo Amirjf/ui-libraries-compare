@@ -13,6 +13,7 @@ import Tables from './components/tables/Tables';
 
 import './App.css';
 import Alerts from './components/alerts/Alerts';
+import Tabs from './components/tabs/Tabs';
 function App() {
   const [showSideNav, setShowSideNav] = useState(true);
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/tables" element={<Tables />} />
           <Route path="/inputs" element={<Inputs />} />
           <Route path="/alerts" element={<Alerts />} />
+          <Route path="/tabs" element={<Tabs />} />
         </Routes>
       </MainContent>
     </div>

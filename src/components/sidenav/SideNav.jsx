@@ -2,7 +2,7 @@ import { MenuFoldOutlined } from '@ant-design/icons';
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const SideNav = ({ sideNavState, getSubject }) => {
+const SideNav = ({ sideNavState }) => {
   const { showSideNav, setShowSideNav } = sideNavState;
 
   return (
@@ -55,6 +55,11 @@ const SideNav = ({ sideNavState, getSubject }) => {
           <li className="cursor-pointer">
             <Link to="/alerts">
               <p>Alerts</p>
+            </Link>
+          </li>
+          <li className="cursor-pointer">
+            <Link to="/tabs">
+              <p>Tabs</p>
             </Link>
           </li>
         </ul>
